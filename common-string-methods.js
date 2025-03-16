@@ -7,16 +7,41 @@ Write a program to:
 Check if the text "JavaScript" is in the string "Learning JavaScript is fun!" using includes.
 Find the position of the word "fun" in the string.
 
+let string1 = "Learning JavaScript is fun!";
+let hasJavaScript = string1.includes("JavaScript");
+let funPosition = string1.indexOf("fun");
+console.log(`Contains "JavaScript": ${hasJavaScript}`);
+console.log(`Position of "fun": ${funPosition}`);
+
 Activity 2: Transforming Strings
 Convert the string " CODE BOOTCAMP " to lowercase and remove all extra whitespace.
 Replace "BOOTCAMP" with "JavaScript" in the transformed string.
 
+let string2 = " CODE BOOTCAMP ";
+let lowercaseString = string2.toLowerCase().trim();
+let replacedString = lowercaseString.replace("bootcamp", "javascript");
+console.log(`Lowercase and trimmed: "${lowercaseString}"`);
+console.log(`Replaced string: "${replacedString}"`);
+
+
 Activity 3: Breaking Apart a Sentence
 Split the sentence "Coding is fun and educational" into an array of words.
+
+let sentence = "Coding is fun and educational";
+let wordsArray = sentence.split(" ");
+console.log(`Words array: ${wordsArray}`);
+
 
 Activity 4: Retrieving Substrings
 Retrieve the first character of "Bootcamp" using charAt.
 Extract the word "camp" from "Bootcamp" using slice.
+
+let word = "Bootcamp";
+let firstCharacter = word.charAt(0);
+let extractedCamp = word.slice(4); // "camp"
+console.log(`First character: ${firstCharacter}`);
+console.log(`Extracted 'camp': ${extractedCamp}`);
+
 
 Advanced Challenge
 Write a program to process the following string:
@@ -69,23 +94,23 @@ Complete the following tasks and assign the results to the specified variables. 
 let inputString = "  Welcome to the Coding Bootcamp! Learn JavaScript today.  ";
 
 // 1. Searching
-let hasJavaScript; // Your code here
-let codingPosition; // Your code here
-let startsWithWelcome; // Your code here
-let endsWithToday; // Your code here
+let hasJavaScript = inputString.includes("JavaScript");
+let codingPosition = inputString.indexOf("Coding");
+let startsWithWelcome = inputString.trim().startsWith("Welcome");
+let endsWithToday = inputString.trim().endsWith("today.");
 
 // 2. Transforming
-let lowercaseString; // Your code here
-let uppercaseString; // Your code here
-let trimmedString; // Your code here
-let replacedString; // Your code here
+let lowercaseString = inputString.toLowerCase();
+let uppercaseString = inputString.toUpperCase();
+let trimmedString = inputString.trim();
+let replacedString = inputString.replace("JavaScript", "coding");
 
 // 3. Breaking Apart
-let wordsArray; // Your code here
+let wordsArray = trimmedString.split(" ");
 
 // 4. Retrieving
-let firstCharacter; // Your code here
-let extractedBootcamp; // Your code here
+let firstCharacter = trimmedString.charAt(0);
+let extractedBootcamp = inputString.slice(trimmedString.indexOf("Bootcamp"), trimmedString.indexOf("Bootcamp") + 8)
 
 // Log all results
 console.log({
